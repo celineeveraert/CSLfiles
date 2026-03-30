@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Nature-Continuous-FirstAuthor</title>
+    <id>http://www.zotero.org/styles/nature-continuous-firstauthor</id>
+    <link href="http://www.zotero.org/styles/nature" rel="dependent"/>
+    <author>
+      <name>M365 Copilot Auto-Generated</name>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="science"/>
+    <updated>2026-03-30T00:00:00Z</updated>
+  </info>
+
+  <citation collapse="citation-number">
+    <layout delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+
+  <bibliography delimiter=" " entry-spacing="0" line-spacing="1">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout display="inline" delimiter=" ">
+      <!-- First author only -->
+      <names variable="author">
+        <name form="short" initialize-with="." delimiter=", "/>
+        <label form="short" prefix=" "/>
+        <substitute>
+          <text variable="title"/>
+        </substitute>
+      </names>
+
+      <!-- Year -->
+      <date variable="issued" prefix=" (" suffix=")">
+        <date-part name="year"/>
+      </date>
+
+      <!-- Title -->
+      <text variable="title" prefix=". "/>
+
+      <!-- Container title (journal) -->
+      <text variable="container-title" prefix=". "/>
+
+      <!-- Volume, pages -->
+      <text variable="volume" prefix=" "/>
+      <text variable="page" prefix=": "/>
+    </layout>
+  </bibliography>
+</style>
