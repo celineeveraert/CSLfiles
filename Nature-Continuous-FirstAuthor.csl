@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" default-locale="en-US">
   <info>
-    <title>Nature-Continuous-FirstAuthor</title>
+    <title>Nature Continuous - First Author Only</title>
+    <title-short>Nature-Continuous-FirstAuthor</title-short>
     <id>http://www.zotero.org/styles/nature-continuous-firstauthor</id>
-    <link href="http://www.zotero.org/styles/nature" rel="dependent"/>
+
+    <link href="http://wwwstyles/nature
+
     <author>
       <name>M365 Copilot Auto-Generated</name>
     </author>
+
     <category citation-format="numeric"/>
     <category field="science"/>
+
     <updated>2026-03-30T00:00:00Z</updated>
   </info>
 
+  <!-- In-text citations -->
   <citation collapse="citation-number">
-    <layout delimiter=",">
+    <layout prefix="[" suffix="]" delimiter=",">
       <text variable="citation-number"/>
     </layout>
   </citation>
 
-  <bibliography delimiter=" " entry-spacing="0" line-spacing="1">
+  <!-- Bibliography -->
+  <bibliography entry-spacing="0" line-spacing="1" delimiter=" ">
     <sort>
       <key variable="citation-number"/>
     </sort>
+
+    <!-- Inline (continuous) format -->
     <layout display="inline" delimiter=" ">
+      
       <!-- First author only -->
       <names variable="author">
-        <name form="short" initialize-with="." delimiter=", "/>
-        <label form="short" prefix=" "/>
+        <name form="short" initialize="true" initialize-with="." name-as-sort-order="all"/>
         <substitute>
           <text variable="title"/>
         </substitute>
@@ -40,12 +49,15 @@
       <!-- Title -->
       <text variable="title" prefix=". "/>
 
-      <!-- Container title (journal) -->
+      <!-- Journal name -->
       <text variable="container-title" prefix=". "/>
 
-      <!-- Volume, pages -->
+      <!-- Volume -->
       <text variable="volume" prefix=" "/>
+
+      <!-- Pages -->
       <text variable="page" prefix=": "/>
     </layout>
   </bibliography>
+
 </style>
